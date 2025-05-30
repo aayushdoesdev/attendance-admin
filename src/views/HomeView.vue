@@ -99,7 +99,7 @@ const prevPage = () => {
     </div>
 
     <!-- Filters -->
-    <div class="flex items-center gap-2 text-md">
+    <div class="flex flex-col items-start md:flex-row md:items-center gap-2 text-md">
       <input
         v-model="searchQuery"
         type="text"

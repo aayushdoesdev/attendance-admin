@@ -77,7 +77,7 @@ const prevPage = () => {
 
     <hr class="my-4" />
 
-    <div class="flex items-center gap-2">
+    <div class="flex flex-col items-start md:flex-row md:items-center gap-2">
       <input
         type="text"
         v-model="searchName"
