@@ -34,9 +34,9 @@ export const useEmployeeStore = defineStore("employee", () => {
 
   const createNewEmployee = async (data) => {
     try {
-      await makeRequest("/user", "POST", data, {}, {page : page.value, limit: limit.value}, 0, null, "/admin/signup");
+     const response = await makeRequest("/user", "POST", data, {}, {page : page.value, limit: limit.value}, 0, null, "/admin/signup");
       
-      if(response.status === "success"){
+      if(response.status == "success"){
       toast.success("Employee Created Successfully!")
     }
       return response; 

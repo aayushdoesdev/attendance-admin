@@ -44,8 +44,8 @@ const formData = ref({
 const genderOptions = ["male", "female", "other"];
 const maritalStatusOptions = ["single", "married", "divorced"];
 const bloodGroupOptions = ["a+", "a-", "b+", "b-", "ab+", "ab-", "o+", "o-"];
-const employmentTypes = ["permanent", "contract", "intern"];
-const departments = ["hr", "engineering", "sales", "ui/ux"];
+const employmentTypes = ["full time", "contract", "intern"];
+const departments = ["hr", "development", "sales", "design", "marketing", "accounts"];
 const roles = ["developer", "manager", "designer"];
 
 const imagePreview = ref(null);
@@ -116,17 +116,7 @@ const validateForm = () => {
   errors.value = [];
   const requiredFields = [
     { key: "userName", label: "User Name" },
-    { key: "fatherName", label: "Father Name" },
-    { key: "motherName", label: "Mother Name" },
     { key: "email", label: "Email" },
-    { key: "phoneNumber", label: "Phone Number" },
-    { key: "birthdate", label: "Birth Date" },
-    { key: "gender", label: "Gender" },
-    { key: "maritalStatus", label: "Marital Status" },
-    { key: "bloodGroup", label: "Blood Group" },
-    { key: "currentAddress", label: "Current Address" },
-    { key: "permanentAddress", label: "Permanent Address" },
-    { key: "emergencyNumber", label: "Emergency Number" },
     { key: "emptype", label: "Employee Type" },
     { key: "department", label: "Department" },
     { key: "role", label: "Role" },
@@ -217,7 +207,7 @@ const createFormData = () => {
 };
 
 const submitEmployeeForm = async () => {
-  
+  // console.log(validateForm())
   if (!validateForm()) {
     return;
   }
