@@ -10,14 +10,14 @@ export const useAuthStore = defineStore('auth', {
   }),
   actions: {
     async loginAdmin(payload) {
-      const res = await axios.post('https://attendancebackends.onrender.com/admin/login', payload)
+      const res = await axios.post('https://gpsbackend-6qit.onrender.com/admin/login', payload)
       const token = res.data.token
       localStorage.setItem('token', `Bearer ${token}`)
       this.token = token
       return res
     },
     async signupAdmin(payload) {
-      const res = await axios.post('https://attendancebackends.onrender.com/admin/signup', payload)
+      const res = await axios.post('https://gpsbackend-6qit.onrender.com/admin/signup', payload)
       return res.data.message
     },
     // logout() {
