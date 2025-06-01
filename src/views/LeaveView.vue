@@ -145,9 +145,9 @@ const prevPage = () => {
               </td>
               <td class="py-3 px-4">
                 {{
-                  employee.status === "approved"
-                    ? 14 - employee.leaveTaken
-                    : 14
+                  employee.status === "approved" || "rejected"
+                    ? employee.definedLeave - employee.leaveTaken
+                    : employee.definedLeave
                 }}
               </td>
               <td class="py-3 px-4">{{ employee.department }}</td>
