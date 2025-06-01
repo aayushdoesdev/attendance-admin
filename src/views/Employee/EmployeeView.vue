@@ -117,7 +117,7 @@ const prevPage = () => {
 
     <!-- Table -->
     <template v-if="allEmployeeData && allEmployeeData.length > 0">
-      <div class="overflow-x-auto no-scrollbar mt-4">
+      <div class=" no-scrollbar overflow-auto max-h-[480px] bg-white mt-2">
         <table class="min-w-[1200px] w-full whitespace-nowrap text-sm">
           <thead class="bg-gray-100 text-left">
             <tr>
